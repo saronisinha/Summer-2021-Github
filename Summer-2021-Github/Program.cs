@@ -8,6 +8,7 @@ namespace Summer_2021_Github
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello!");
+            Console.WriteLine("Last changes");
         }
     }
 }
