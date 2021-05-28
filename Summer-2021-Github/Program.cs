@@ -7,6 +7,7 @@ namespace Summer_2021_Github
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello!");
         }
     }
 }
