@@ -13,13 +13,9 @@ namespace Summer_2021_Github
             bool pos = JudgeCircle(moves);
             //Checking the return value of method
             if (pos)
-            {
                 Console.WriteLine("The Robot returns to the initial position (0,0)");
-            }
             else
-            {
                 Console.WriteLine("The Robot does not return to the initial postion (0,0)");
-            }
         }
 
         static public bool JudgeCircle(string moves)
