@@ -118,6 +118,7 @@ namespace Summer_2021_Github
         }
 
 
+
         public static bool CheckIfPangram(string sentence)
         {
             //Initialising string consisting of all alphabets
@@ -152,6 +153,7 @@ namespace Summer_2021_Github
         }
 
 
+
         public static int NumIdenticalPairs(int[] nums)
         {
             int count = 0;
@@ -174,6 +176,8 @@ namespace Summer_2021_Github
             //returns the number of matches
             return count;
         }
+
+
 
         public static int PivotIndex(int[] lst)
         {
@@ -207,6 +211,7 @@ namespace Summer_2021_Github
         }
 
 
+
         public static string MergeAlternately(string word1, string word2)
         {
             try
@@ -236,6 +241,7 @@ namespace Summer_2021_Github
                 throw;
             }
         }
+
 
 
         public static string ToGoatLatin(string sentence)
