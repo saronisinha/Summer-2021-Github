@@ -113,7 +113,7 @@ namespace Summer_2021_Github
                 Console.WriteLine("Exception occured in JudgeCircle\n");
                 throw;
             }
-            //returns true if x==0 and y==0
+            //returns true if x==0 and y==0 which denotes position (0,0)
             return (x == 0 && y == 0);
         }
 
@@ -128,7 +128,7 @@ namespace Summer_2021_Github
             {
                 foreach (char c in alpha)
                 {
-                    //Looping through the input string to run the comparison
+                    //Looping through the input string to run the comparison with elements of alpha
                     foreach (char l in sentence.ToLower())
                     {
                         //comparing alphabets and increasing count if it is a match
@@ -145,7 +145,7 @@ namespace Summer_2021_Github
                 Console.WriteLine("Exception occured in CheckIfPangram\n");
                 throw;
             }
-            //all 26 matches meaning all alphabets are present in input string
+            //all 26 matches means all alphabets are present in input string
             if (count == 26)
                 return true;
             else
@@ -159,9 +159,10 @@ namespace Summer_2021_Github
             int count = 0;
             try
             {
-                //nested loop to compare between elements inside the array while parsing through the elements
+                //nested loop to compare elements inside the array while parsing through the elements
                 for (int i = 0; i < nums.Length - 1; i++)
                 {
+                    //loop for comparing elements with a particular element i
                     for (int j = i + 1; j < nums.Length; j++)
                     {
                         if (nums[i] == nums[j] && i < j)
@@ -184,19 +185,22 @@ namespace Summer_2021_Github
             try
             {
                 int ts = 0;
+                // loop for calculating total sum
                 for (int i = 0; i < lst.Length; i++)
                 {
                     ts += lst[i];
                 }
+                // loop for identifying pivot position i
                 for (int i = 1; i < lst.Length; i++)
                 {
                     int rs = 0;
                     int ls = 0;
-
+                    // loop for calculating right sum for a particular pivot position i
                     for (int j = i + 1; j < lst.Length; j++)
                     {
                         rs += lst[j];
                     }
+                    //calculating left sum for a particular pivot position i
                     ls = ts - rs - lst[i];
                     if (ls == rs)
                         return i;
@@ -216,23 +220,25 @@ namespace Summer_2021_Github
         {
             try
             {
-
+                // checking null
                 if (word1 == null || word1.Length == 0)
                     return word2;
                 if (word2 == null || word2.Length == 0)
                     return word1;
 
-                int idx1 = 0, idx2 = 0;
+                int i1 = 0, i2 = 0;
                 StringBuilder sb = new StringBuilder();
-                while (idx1 < word1.Length && idx2 < word2.Length)
+                // appending alternately from both inputs
+                while (i1 < word1.Length && i2 < word2.Length)
                 {
-                    sb.Append(word1[idx1++]);
-                    sb.Append(word2[idx2++]);
+                    sb.Append(word1[i1++]);
+                    sb.Append(word2[i2++]);
                 }
-                while (idx1 < word1.Length)
-                    sb.Append(word1[idx1++]);
-                while (idx2 < word2.Length)
-                    sb.Append(word2[idx2++]);
+                // appending the remaining letters of particular input if any
+                while (i1 < word1.Length)
+                    sb.Append(word1[i1++]);
+                while (i2 < word2.Length)
+                    sb.Append(word2[i2++]);
                 return sb.ToString();
             }
             catch
@@ -248,7 +254,6 @@ namespace Summer_2021_Github
         {
             try
             {
-                // write your code here.
                 var words = sentence.Split(' ');
 
                 StringBuilder sb = new StringBuilder();
@@ -256,7 +261,7 @@ namespace Summer_2021_Github
                 foreach (string w in words)
                 {
                     count++;
-                    // word starts from vowel
+                    // word starting with vowel
                     if (
                         w[0] == 'a' || w[0] == 'e' || w[0] == 'i' || w[0] == 'o' || w[0] == 'u' ||
                         w[0] == 'A' || w[0] == 'E' || w[0] == 'I' || w[0] == 'O' || w[0] == 'U'
@@ -264,18 +269,18 @@ namespace Summer_2021_Github
                     {
                         sb.Append(w);
                     }
-                    // word is a consonant
+                    // word starting with consonant
                     else
                     {
                         for (int i = 1; i < w.Length; i++)
                             sb.Append(w[i]);
-                        // appending first word in the end
+                        // appending first letter at the end
                         sb.Append(w[0]);
                     }
                     sb.Append("ma");
                     for (int i = 0; i < count; i++)
                         sb.Append('a');
-                    // skipping space for the last word
+                    // adding space before next word
                     if (count < words.Length)
                         sb.Append(' ');
 
@@ -293,6 +298,7 @@ namespace Summer_2021_Github
     }
 
 }
+
 
 
 
