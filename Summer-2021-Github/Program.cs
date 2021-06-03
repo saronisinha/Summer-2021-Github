@@ -117,6 +117,7 @@ namespace Summer_2021_Github
             return (x == 0 && y == 0);
         }
 
+
         public static bool CheckIfPangram(string sentence)
         {
             //Initialising string consisting of all alphabets
@@ -149,6 +150,7 @@ namespace Summer_2021_Github
             else
                 return false;
         }
+
 
         public static int NumIdenticalPairs(int[] nums)
         {
@@ -204,6 +206,7 @@ namespace Summer_2021_Github
             return -1;
         }
 
+
         public static string MergeAlternately(string word1, string word2)
         {
             try
@@ -232,10 +235,8 @@ namespace Summer_2021_Github
                 Console.WriteLine("Exception occured in MergeAlternately\n");
                 throw;
             }
-
-
-
         }
+
 
         public static string ToGoatLatin(string sentence)
         {
